@@ -20,6 +20,8 @@ echo $TASKNAME
 echo $DOCKER_FILE
 
 set -euxo pipefail  # fail on error
+
+git config --global --add safe.directory $GITHUB_WORKSPACE
   
 # Generate an tag with a reproducible checksum of all files in . by doing a checksum of all files
 # in alphabetical order, then another checksum of their names and checksums.
